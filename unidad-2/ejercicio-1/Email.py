@@ -13,11 +13,11 @@ class Email():
 
     #Metodo 1
     def retorna_email(self):
-        return(self.__id_cuenta + '@' + self.__dominio + '.' + self.__tipo_dominio);
+        return(self.__id_cuenta + '@' + self.__dominio + '.' + self.__tipo_dominio)
 
     #Metodo 2
     def get_dominio(self):
-        return('@'+ self.__dominio);
+        return('@'+ self.__dominio)
 
     def set_contrasenia(self, contrasenia):
         self.__contrasenia = contrasenia
