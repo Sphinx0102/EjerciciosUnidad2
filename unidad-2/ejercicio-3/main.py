@@ -1,45 +1,37 @@
-import numpy as np
 from Registro import Registro
 from claseMenu import Menu
 import csv
 
-def define_list():
-    file = open('dataset.csv')
-    csvreader = csv.reader(file)
-    max_dia = 0
-    max_hora = 0
-    for row in csvreader:
-        if(int(row[0]) > max_dia):
-            max_dia = int(row[0])
-        if(int(row[1]) > max_hora):
-            max_hora = int(row[1])
-    return [['no data'] * (max_hora+1) for i in range(max_dia)]
-
 def carga_archivo():
-    lista = define_list()
+    lista_dia = [[0] * 24 for i in range(30)]
     file = open('dataset.csv')
-    cvsreader = csv.reader(file)
-    for row in cvsreader:
-        registro = Registro()
-        registro.registro(row)
-        lista[int(row[0])-1][int(row[1])] = registro
+    csvreader = csv.reader(file, delimiter = ',')
+    for row in csvreader:
+        index_i = int(row[0])
+        index_j = int(row[1])
+        temp = row[2]
+        hum = row[3]
+        pre = row[4]
+        newregistro = Registro(temp, hum, pre)
+        lista_dia[index_i-1][index_j]=newregistro
+    file.close()
+    return(lista_dia)
 
 
 
 def main():
-    carga_archivo()
+    lista = carga_archivo()
 
     bandera = False
     while not bandera:
         print("""Menu: 
             Opcion 1: Mostrar dia y hora de el menor y mayor valor de las variables
-            Opcion 2: Mostrar datos
-            Opcion 3: Monto para licitar
-            Opcion 4: Modificar cantidad de cuotas para licitar
-            Opcion 5: Salir""")
+            Opcion 2: Indicar la temperatura promedio mensual por cada hora
+            Opcion 3: Listar los valores de las tres variables para cada hora del día dado
+            Opcion 4: Salir""")
         opcion = input("ingrese el numero de la opcion deseada: ")
         menu = Menu()
-        menu.opcion(opcion, list)
+        menu.opcion(opcion, lista)
         bandera = int(opcion) == 4
 
 

@@ -5,9 +5,10 @@ class Registro():
     
     #Constructor
     def __init__(self, temperatura= '', humedad= '', presion = ''):
-        self.__temperatura = temperatura
-        self.__humedad = humedad
-        self.__presion_atmosferica = presion
+        self.__temperatura = int(temperatura)
+        self.__humedad = int(humedad)
+        self.__presion_atmosferica = int(presion)
+
 
     def getvalue_temp(self):
         return self.__temperatura
@@ -17,10 +18,3 @@ class Registro():
 
     def getvalue_presion(self):
         return self.__presion_atmosferica
-
-    def registro (self, dia):
-        self.___dia = dia[0]
-        self.__hora = dia[1]
-        self.__temperatura = int(dia[2])
-        self.__humedad = int(dia[3])
-        self.__presion_atmosferica = int(dia[4])
