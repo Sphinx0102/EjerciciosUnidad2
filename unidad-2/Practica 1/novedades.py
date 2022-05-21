@@ -21,3 +21,6 @@ class Novedad:
     
     def get_codigo(self):
         return self.__codigo
+    
+    def get_concepto(self):
+        return self.__concepto
