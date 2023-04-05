@@ -1,4 +1,4 @@
-# poo-ejercicios
+# Ejercicios de Programacion Orientada a Objetos
 ##### Materia Programacion Orientada a Objetos
 ____
 
