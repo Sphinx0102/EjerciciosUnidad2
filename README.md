@@ -1,7 +1,12 @@
-# Ejercicios de Programacion Orientada a Objetos
-##### Materia Programacion Orientada a Objetos
+# Object-Oriented Programming Exercises
+
+##### Subject: Object-Oriented Programming
 ____
 
-##### Technologies Implemented
+<p align="center">
+  <b>Technologies Implemented:</b>
+</p>
 
-- ![Python Icon](https://img.icons8.com/color/48/000000/python.png)
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-100.0%25-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+</p>
