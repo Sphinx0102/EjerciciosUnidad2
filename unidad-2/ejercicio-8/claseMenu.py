@@ -20,11 +20,9 @@ class Menu:
     def opcion1(self,A, B):
         C = (A+B)
         print(C)
-      
     def opcion2(self,A, B):
       C = (A-B)
       print(C)
-
     def opcion3(self,A, B):
         if(A == B):
             print("Ambos conjuntos son iguales")
